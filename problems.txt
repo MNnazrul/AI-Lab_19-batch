@@ -1,0 +1,5 @@
+1. Keyword-based Q/A
+2. 8 Puzzle problem
+3. 8 Queen problem
+4. Cryptarithmetic puzzle
+5. 9x9 Sudoku
