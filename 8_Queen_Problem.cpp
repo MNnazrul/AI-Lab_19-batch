@@ -3,8 +3,6 @@ using namespace std;
 
 int const N = 8, max_initaration = 200;
  
-
-
 vector<int> genenrateNeighbor(vector<int> &state) {
     vector<int> neighbor = state;
     int id1 = rand() % N, id2 = rand() % N;
@@ -28,7 +26,7 @@ vector<int> N_queen(vector<int>& state) {
     for (int i = 0; i < max_initaration; i++) {
         vector<int> neighbor = genenrateNeighbor(current_state);
         int neighbor_conflict = conflict(neighbor);
-        if(neighbor_conflict < current_conflict) {
+        if(neighbor_conflict <= current_conflict) {
             current_state = neighbor;
             current_conflict = neighbor_conflict; 
         }
