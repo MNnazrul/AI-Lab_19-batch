@@ -27,30 +27,35 @@ int main()
         int c = 0;
         bool f = true;
         int n1 = 0, n2 = 0, n3 = 0;
-        for (char ch : s1)
-            n1 = n1 * 10 + a[pos[ch - 'a']];
-        for (char ch : s2)
-            n2 = n2 * 10 + a[pos[ch - 'a']];
-        for (char ch : s3)
-            n3 = n3 * 10 + a[pos[ch - 'a']];
 
-        if (n1 + n2 == n3)
-        {
-            for (char ch : st)
-            {
-                cout << ch << " " << a[pos[ch - 'a']] << endl;
-            }
+        if(!(a[pos[s1[0]-'a']] == 0 or a[pos[s2[0]-'a']] == 0 or a[pos[s3[0]-'a']] == 0)) {
             for (char ch : s1)
-                cout << a[pos[ch - 'a']];
-            cout << endl;
+                n1 = n1 * 10 + a[pos[ch - 'a']];
             for (char ch : s2)
-                cout << a[pos[ch - 'a']];
-            cout << endl;
+                n2 = n2 * 10 + a[pos[ch - 'a']];
             for (char ch : s3)
-                cout << a[pos[ch - 'a']];
-            cout << endl;
-            break;
+                n3 = n3 * 10 + a[pos[ch - 'a']];
+
+            if (n1 + n2 == n3)
+            {
+                for (char ch : st)
+                {
+                    cout << ch << " " << a[pos[ch - 'a']] << endl;
+                }
+                for (char ch : s1)
+                    cout << a[pos[ch - 'a']];
+                cout << endl;
+                for (char ch : s2)
+                    cout << a[pos[ch - 'a']];
+                cout << endl;
+                for (char ch : s3)
+                    cout << a[pos[ch - 'a']];
+                cout << endl;
+                break;
+            }
         }
+
+
 
     } while (next_permutation(a.begin(), a.end()));
 

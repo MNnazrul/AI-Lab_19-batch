@@ -2,7 +2,7 @@
 using namespace std;
 
 int const N = 8, max_initaration = 200;
- 
+
 vector<int> genenrateNeighbor(vector<int> &state) {
     vector<int> neighbor = state;
     int id1 = rand() % N, id2 = rand() % N;

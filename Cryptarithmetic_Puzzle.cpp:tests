@@ -1,0 +1,8 @@
+[
+	{
+		"test": "two \ntwo \nfour\n"
+	},
+	{
+		"test": "send\nmore\nmoney\n"
+	}
+]
